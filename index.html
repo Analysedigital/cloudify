@@ -20,19 +20,29 @@
       <img class="brand" src="images/logo.png" alt="CloudifyOps logo" />
       <nav aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href=""> 
-            <svg width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.75 1.77643C8.75 0.795367 9.53354 0 10.5 0H33.25C34.2165 0 35 0.795367 35 1.77643C35 2.75749 34.2165 3.55285 33.25 3.55285H10.5C9.53354 3.55285 8.75 2.75742 8.75 1.77643ZM33.25 10.6586H1.75C0.783535 10.6586 0 11.454 0 12.435C0 13.416 0.783535 14.2114 1.75 14.2114H33.25C34.2165 14.2114 35 13.416 35 12.435C35 11.454 34.2165 10.6586 33.25 10.6586ZM33.25 21.3171H17.5C16.5336 21.3171 15.75 22.1125 15.75 23.0935C15.75 24.0745 16.5336 24.87 17.5 24.87H33.25C34.2165 24.87 35 24.0745 35 23.0935C35 22.1125 34.2165 21.3171 33.25 21.3171Z" fill="#06B715"/>
-</svg>
-
-          </a></li>
+          <li class="nav-desktop-item"><a href="#">Home</a></li>
+          <li class="nav-desktop-item"><a href="#services">Services</a></li>
+          <li class="nav-desktop-item"><a href="#products">Products</a></li>
+          <li>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle mobile menu">
+              <svg width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.75 1.77643C8.75 0.795367 9.53354 0 10.5 0H33.25C34.2165 0 35 0.795367 35 1.77643C35 2.75749 34.2165 3.55285 33.25 3.55285H10.5C9.53354 3.55285 8.75 2.75742 8.75 1.77643ZM33.25 10.6586H1.75C0.783535 10.6586 0 11.454 0 12.435C0 13.416 0.783535 14.2114 1.75 14.2114H33.25C34.2165 14.2114 35 13.416 35 12.435C35 11.454 34.2165 10.6586 33.25 10.6586ZM33.25 21.3171H17.5C16.5336 21.3171 15.75 22.1125 15.75 23.0935C15.75 24.0745 16.5336 24.87 17.5 24.87H33.25C34.2165 24.87 35 24.0745 35 23.0935C35 22.1125 34.2165 21.3171 33.25 21.3171Z" fill="#06B715"/>
+              </svg>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <!-- Mobile slide-down nav -->
+  <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+    </ul>
+  </div>
 
   <main>
     <section class="hero section-soft" aria-labelledby="hero-title">
@@ -294,7 +304,7 @@
               <img src="images/productized_Logic.png" alt="Productized Logic" />  
               Productized Logic</li>
             <li>
-              <img src="images/ai_Accelerated.png" alt="AI-Accelerated" />  
+              <img src="images/AI_Accelerated.png" alt="AI-Accelerated" />  
               AI-Accelerated</li>
             <li>
               <img src="images/full_Autonomy.png" alt="Full Autonomy" />  
@@ -889,5 +899,27 @@
       });
     })();
   </script>
-</body>
-</html>
+
+  <script>
+    // Mobile menu toggle
+    (function () {
+      var toggleBtn = document.getElementById("mobile-menu-toggle");
+      var mobileNav = document.getElementById("mobile-nav");
+      if (!toggleBtn || !mobileNav) return;
+
+      toggleBtn.addEventListener("click", function () {
+        var isOpen = mobileNav.classList.toggle("is-open");
+        toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        mobileNav.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+
+      // Close menu when a link is clicked
+      mobileNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileNav.classList.remove("is-open");
+          toggleBtn.setAttribute("aria-expanded", "false");
+          mobileNav.setAttribute("aria-hidden", "true");
+        });
+      });
+    })();
+  </script>
