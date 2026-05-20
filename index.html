@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="overlay-header">
   <header class="site-header" role="banner">
     <div class="container header-wrap">
       <img class="brand" src="images/logo.png" alt="CloudifyOps logo" />
@@ -636,52 +636,61 @@
       particlesJS("hero-particles", {
         particles: {
           number: {
-            value: 150,
+            value: 120,
             density: {
               enable: true,
-              value_area: 1000
+              value_area: 920
             }
           },
           color: {
             value: ["#12a391", "#179ACD", "#06B716"]
           },
           shape: {
-            type: "circle"
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#179ACD"
+            }
           },
           opacity: {
-            value: 0.46,
+            value: 0.38,
             random: true,
             anim: {
               enable: true,
-              speed: 0.6,
-              opacity_min: 0.15,
+              speed: 0.9,
+              opacity_min: 0.1,
               sync: false
             }
           },
           size: {
-            value: 2.6,
+            value: 2.2,
             random: true,
             anim: {
-              enable: false
+              enable: true,
+              speed: 2,
+              size_min: 0.4,
+              sync: false
             }
           },
           line_linked: {
             enable: true,
-            distance: 165,
+            distance: 145,
             color: "#179ACD",
-            opacity: 0.24,
+            opacity: 0.32,
             width: 1
           },
           move: {
             enable: true,
-            speed: 1.6,
+            speed: 1.15,
             direction: "none",
-            random: true,
+            random: false,
             straight: false,
             out_mode: "out",
-            bounce: false,
+            bounce: true,
             attract: {
-              enable: false
+              enable: true,
+              rotateX: 900,
+              rotateY: 1200
             }
           }
         },
@@ -690,18 +699,24 @@
           events: {
             onhover: {
               enable: true,
-              mode: "repulse"
+              mode: "grab"
             },
             onclick: {
-              enable: false,
-              mode: "push"
+              enable: true,
+              mode: "repulse"
             },
             resize: true
           },
           modes: {
+            grab: {
+              distance: 220,
+              line_linked: {
+                opacity: 0.75
+              }
+            },
             repulse: {
-              distance: 175,
-              duration: 0.55
+              distance: 130,
+              duration: 0.4
             }
           }
         },
@@ -709,8 +724,6 @@
       });
     })();
   </script>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     (function () {
       var header = document.querySelector(".site-header");
@@ -752,19 +765,126 @@
       syncScrollButton();
     })();
   </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Counter animation for stat values
+    (function () {
+      var statValues = document.querySelectorAll(".stat-value");
+      var animated = new Set();
+
+      function animateCounter(element) {
+        if (animated.has(element)) return;
+        animated.add(element);
+
+        var text = element.textContent.trim();
+        var isPercent = text.includes("%");
+        var isPlus = text.includes("+");
+        
+        // Extract numeric value
+        var numericText = text.replace(/[^0-9.]/g, "");
+        var finalValue = parseFloat(numericText);
+        var isDecimal = numericText.includes(".");
+
+        var startValue = 0;
+        var duration = 2000; // 2 seconds
+        var startTime = null;
+
+        function updateCounter(currentTime) {
+          if (!startTime) startTime = currentTime;
+          var elapsed = currentTime - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+
+          var currentValue = Math.floor(progress * finalValue * 10) / 10;
+          
+          var displayValue = isDecimal 
+            ? currentValue.toFixed(1) 
+            : Math.floor(currentValue);
+          
+          element.textContent = displayValue + (isPercent ? "%" : "") + (isPlus ? "+" : "");
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = finalValue + (isPercent ? "%" : "") + (isPlus ? "+" : "");
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      }
+
+      // Use Intersection Observer to trigger animation when element comes into view
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        statValues.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: animate immediately if IntersectionObserver not supported
+        statValues.forEach(function (el) {
+          animateCounter(el);
+        });
+      }
+    })();
+  </script>
   <script>
     (function () {
-      var sections = document.querySelectorAll("main > section, .site-footer");
+      // Initialize AOS for content elements (not entire sections)
+      var cardSelectors = [
+        '.card',
+        '.service-card',
+        '.managed-card',
+        '.quote',
+        '.insight',
+        '.provider-card',
+        '.timeline-step'
+      ];
+      
+      cardSelectors.forEach(function(selector) {
+        var elements = document.querySelectorAll(selector);
+        elements.forEach(function(el, index) {
+          el.setAttribute("data-aos", "fade-up");
+          el.setAttribute("data-aos-duration", "800");
+          el.setAttribute("data-aos-delay", String(Math.min(index * 50, 200)));
+        });
+      });
 
-      sections.forEach(function (section, index) {
-        section.setAttribute("data-aos", index % 2 === 0 ? "fade-left" : "fade-up");
-        section.setAttribute("data-aos-duration", "900");
-        section.setAttribute("data-aos-delay", String(Math.min(index * 60, 240)));
+      // Add animation to section titles and content
+      var sections = document.querySelectorAll("main > section");
+      sections.forEach(function(section) {
+        var display = section.querySelector(".display");
+        var eyebrow = section.querySelector(".eyebrow");
+        var leads = section.querySelectorAll(".lead");
+        var ctaRow = section.querySelector(".cta-row");
+        var grid = section.querySelector("[class*='-grid']");
+        
+        if (display) display.setAttribute("data-aos", "fade-up");
+        if (eyebrow) eyebrow.setAttribute("data-aos", "fade-up");
+        leads.forEach(function(lead) {
+          lead.setAttribute("data-aos", "fade-up");
+        });
+        if (ctaRow) ctaRow.setAttribute("data-aos", "fade-up");
+        if (grid && !grid.classList.contains("stats-grid")) {
+          grid.setAttribute("data-aos", "fade-up");
+        }
+      });
+
+      // Remove animation from background images
+      var bgImages = document.querySelectorAll(".managed-bg, .background-visual");
+      bgImages.forEach(function(el) {
+        el.removeAttribute("data-aos");
       });
 
       AOS.init({
         once: true,
-        offset: 80,
+        offset: 100,
+        duration: 800,
         easing: "ease-out-cubic"
       });
     })();
