@@ -8,8 +8,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scrollbar-gutter: stable;
+}
+
+@media (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -222,6 +227,13 @@ background-color: #ffffff;
   -webkit-backdrop-filter: blur(10px);
 }
 
+@media (max-width: 767px) {
+  .site-header.is-scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
 .overlay-header .site-header {
   position: fixed;
   top: 0;
@@ -237,6 +249,13 @@ background-color: #ffffff;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 767px) {
+  .overlay-header .site-header.is-scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 .overlay-header .hero {
@@ -298,6 +317,14 @@ background-color: #ffffff;
   overflow: hidden;
   transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
+  will-change: max-height;
+}
+
+@media (max-width: 767px) {
+  .mobile-nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
 
 .mobile-nav.is-open {
