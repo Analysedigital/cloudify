@@ -1421,7 +1421,7 @@ background-color: #ffffff;
 }
 
 .vision-options {
-  display: flex;
+  /* display: flex;
   margin-top: auto;
   margin-bottom: 0;
   position: absolute;
@@ -1431,7 +1431,12 @@ background-color: #ffffff;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 46px;
+  margin-bottom: 46px; */
+      display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 46px;
 }
 
 .vision-option-box {
