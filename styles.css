@@ -984,6 +984,241 @@ background-color: #ffffff;
 }
 
 /* ============================================
+   GCP Capabilities Section
+   ============================================ */
+.gcp-page .strategic-partners-layout {
+  align-items: start;
+}
+
+.gcp-capabilities-title {
+  max-width: 760px;
+  margin: 0 0 12px;
+  font-family: var(--display-font);
+  font-weight: 800;
+  font-size: clamp(34px, 3vw, 52px);
+  line-height: 1.06;
+  letter-spacing: 0.01em;
+  color: #111111;
+}
+
+.gcp-capabilities-eyebrow {
+  margin: 0 0 24px;
+  font-family: var(--eyebrow-font);
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  color: #2b9085;
+}
+
+.gcp-capabilities-copy {
+  max-width: 940px;
+  margin: 0 0 30px;
+  font-family: var(--display-font);
+  font-size: clamp(18px, 1.35vw, 30px);
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  color: #1f1f1f;
+}
+
+.gcp-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px 24px;
+}
+
+.gcp-capability-item h4 {
+  margin: 0 0 8px;
+  font-family: var(--smooch-font);
+  font-weight: 700;
+  font-size: clamp(22px, 1.55vw, 28px);
+  line-height: 1.18;
+  letter-spacing: 0.01em;
+  color: #111111;
+}
+
+.gcp-capability-item p {
+  margin: 0;
+  font-family: var(--display-font);
+  font-weight: 400;
+  font-size: clamp(15px, 1.15vw, 22px);
+  line-height: 1.34;
+  letter-spacing: 0.02em;
+  color: #2e2e2e;
+}
+
+@media (max-width: 1199px) {
+  .gcp-capabilities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .gcp-capabilities-title {
+    font-size: clamp(28px, 8vw, 42px);
+    line-height: 1.1;
+  }
+
+  .gcp-capabilities-copy {
+    margin-bottom: 24px;
+    letter-spacing: 0.04em;
+    font-size: clamp(16px, 4.3vw, 20px);
+  }
+
+  .gcp-capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gcp-capability-item h4 {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .gcp-capability-item p {
+    font-size: clamp(16px, 4.2vw, 20px);
+  }
+}
+
+/* ============================================
+   Why Partner Section
+   ============================================ */
+.why-partner-section {
+  background-image: url('images/section_bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+      padding-top: clamp(34px, 4vw, 56px);
+    padding-bottom: clamp(22px, 3vw, 50px);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-partner-layout {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(60px, 8vw, 100px);
+}
+
+.why-partner-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 40%;
+}
+
+.why-partner-title {
+  margin: 0 0 24px;
+  font-family: var(--display-font);
+  font-weight: 800;
+  font-size: clamp(42px, 4.2vw, 62px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+.why-partner-subtitle {
+  margin: 0;
+  font-family: var(--body-font);
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 20px);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: #2e2e2e;
+}
+
+.why-partner-right {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.why-partner-benefits {
+   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: clamp(28px, 3vw, 48px);
+  width: 100%;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.benefit-icon {
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.benefit-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.benefit-item h3 {
+  margin: 0;
+  font-family: var(--smooch-font);
+  font-weight: 600;
+  font-size: clamp(16px, 1.55vw, 20px);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+@media (max-width: 1199px) {
+  .why-partner-layout {
+    gap: clamp(48px, 6vw, 72px);
+  }
+
+  .why-partner-left {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .why-partner-benefits {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .why-partner-section {
+    padding: clamp(40px, 6vw, 56px) var(--spacing-lg);
+    background-attachment: scroll;
+  }
+
+  .why-partner-title {
+    font-size: clamp(32px, 7vw, 46px);
+    margin-bottom: 16px;
+  }
+
+  .why-partner-subtitle {
+    font-size: clamp(16px, 4.2vw, 20px);
+  }
+
+  .why-partner-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 4vw, 32px);
+  }
+
+  .benefit-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .benefit-item h3 {
+    font-size: clamp(14px, 3.5vw, 18px);
+  }
+}
+
+/* ============================================
    Section 4: AI Services
    ============================================ */
 .ai-services-section {
@@ -2074,11 +2309,17 @@ background-color: #ffffff;
     max-width: 1320px;
   }
 
+  .grid-colum-3-2{
+     grid-template-columns:65fr 35fr;
+  }
+
   .hero-security-copy {
     max-width: 560px;
     position: relative;
     z-index: 2;
   }
+
+
 
   .hero-security-copy .display {
     font-size: clamp(48px, 8vw, 62px);
@@ -2109,6 +2350,20 @@ background-color: #ffffff;
     display: block;
   }
 
+  .hero-gcp-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-gcp-visual img {
+    width: min(100%, 400px);
+    height: auto;
+    display: block;
+  }
+
   .security-stats {  
     padding-top: clamp(36px, 5vw, 56px);
     padding-bottom: clamp(34px, 5vw, 54px);
@@ -2135,6 +2390,16 @@ background-color: #ffffff;
     font-weight: 300;
     color: #1f1f1f;
   }
+
+    .gcp-title-width{max-width: 800px;}
+   .hero-title-gcp {    font-family: var(--smooch-font);
+    font-size: clamp(20px, 1.6vw, 24px);
+    line-height: 1.16;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: clamp(16px, 2vw, 22px);}
+
+   
 
   @media (max-width: 991px) {
     .hero-security-inner {
@@ -2824,3 +3089,6 @@ background-color: #ffffff;
 .text-center{text-align: center;}
 .ml-10{margin-left: 10px;}
 .mr-10{margin-right: 10px;}
+.mt-10{margin-top: 10px;}
+.mb-10{margin-bottom: 10px;}
+.col-dir{flex-direction: column;}
