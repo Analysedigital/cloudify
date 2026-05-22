@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Cloud Services | CloudifyOps</title>
+  <meta name="description" content="Protect your cloud environment with CloudifyOps comprehensive security and governance solutions." />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Sans:wght@300;400;500;700;800&family=Smooch+Sans:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="secure-cloud-page overlay-header">
+  <!-- Header (Same as index.html) -->
+  <header class="site-header" role="banner">
+    <div class="container header-wrap">
+      <img class="brand" src="images/logo.png" alt="CloudifyOps logo" />
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li class="nav-desktop-item"><a href="index.html">Home</a></li>
+          <li class="nav-desktop-item"><a href="index.html#services">Services</a></li>
+          <li class="nav-desktop-item"><a href="index.html#products">Products</a></li>
+          <li>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle mobile menu">
+              <svg width="35" height="25" viewBox="0 0 35 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.75 1.77643C8.75 0.795367 9.53354 0 10.5 0H33.25C34.2165 0 35 0.795367 35 1.77643C35 2.75749 34.2165 3.55285 33.25 3.55285H10.5C9.53354 3.55285 8.75 2.75742 8.75 1.77643ZM33.25 10.6586H1.75C0.783535 10.6586 0 11.454 0 12.435C0 13.416 0.783535 14.2114 1.75 14.2114H33.25C34.2165 14.2114 35 13.416 35 12.435C35 11.454 34.2165 10.6586 33.25 10.6586ZM33.25 21.3171H17.5C16.5336 21.3171 15.75 22.1125 15.75 23.0935C15.75 24.0745 16.5336 24.87 17.5 24.87H33.25C34.2165 24.87 35 24.0745 35 23.0935C35 22.1125 34.2165 21.3171 33.25 21.3171Z" fill="#06B715"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile slide-down nav -->
+  <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#products">Products</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section-soft hero-security" aria-labelledby="hero-title">
+      <div class="container hero-inner hero-security-inner">
+        <div class="hero-security-copy">
+            <p class="eyebrow">AI Transformation Services</p>
+          <h1 id="hero-title" class="display">
+           Strategic AI Consulting
+          </h1>
+          <p class="lead hero-security-lead">
+           Expert-led assessments and industry-specific roadmaps that align AI capabilities with your highest-impact business outcomes — so every investment drives measurable results.
+          </p>
+          <a class="btn btn-outline" href="#services">Book a Strategy Session</a>
+        </div>
+        <div class="hero-security-visual" aria-hidden="true">
+          <img src="images/secure-cloud-services.png" alt="Secure cloud services" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai-problem-section" aria-labelledby="ai-problem-title">
+      <div class="container ai-problem-layout">
+        <div class="ai-problem-copy">
+          <p class="eyebrow">The Problem</p>
+          <h2 id="ai-problem-title" class="ai-problem-title gradient2">AI Without Strategy is Just Expensive Experimentation</h2>
+          <p class="lead ai-problem-lead">Most enterprises don't fail at AI because of technology; they fail because they start building before they know what to build.</p>
+        </div>
+
+        <div class="ai-problem-points-grid" aria-label="Core AI strategy challenges">
+          <article class="ai-problem-card">
+            <img src="images/strategic-direction.png" alt="Strategic direction icon" class="ai-problem-icon" />
+            <h3>AI initiatives lack strategic direction</h3>
+            <p>Organizations invest in AI without a clear roadmap, resulting in scattered pilots that never scale to production value.</p>
+          </article>
+
+          <article class="ai-problem-card">
+            <img src="images/disconnected-business-outcomes.png" alt="Business outcomes icon" class="ai-problem-icon" />
+            <h3>Disconnected from business outcomes</h3>
+            <p>Technical teams build impressive models that don't map to revenue, cost savings, or competitive advantage.</p>
+          </article>
+
+          <article class="ai-problem-card">
+            <img src="images/indutsry-specific-content.png" alt="Industry context icon" class="ai-problem-icon" />
+            <h3>No industry-specific context</h3>
+            <p>Generic AI approaches ignore the regulatory, operational, and market dynamics unique to your sector.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai-roadmap-section" aria-labelledby="ai-roadmap-title">
+      <div class="container ai-roadmap-wrap">
+        <div class="ai-roadmap-header">
+          <p class="eyebrow">The Problem</p>
+          <h2 id="ai-roadmap-title" class="ai-roadmap-title gradient2">Industry-Specific AI Roadmaps</h2>
+          <p class="lead ai-roadmap-lead">We don't just advise on AI; we build executable strategies anchored to your cloud foundation and business reality.</p>
+        </div>
+
+        <div class="ai-roadmap-list" aria-label="Industry-specific AI roadmap modules">
+          <article class="ai-roadmap-row">
+            <div class="ai-roadmap-main">
+              <h3>AI Readiness Assessment</h3>
+              <p>A comprehensive evaluation of your data maturity, infrastructure, team capabilities, and organizational culture scored against industry benchmarks to identify exactly where you stand.</p>
+            </div>
+            <div class="ai-roadmap-points">
+              <div class="ai-roadmap-point">
+                <span>01</span>
+                <p>Data quality and availability audit</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>02</span>
+                <p>Infrastructure capability mapping</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>03</span>
+                <p>Skills gap analysis</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>04</span>
+                <p>Cultural readiness evaluation</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="ai-roadmap-row">
+            <div class="ai-roadmap-main">
+              <h3>Strategic AI Roadmap</h3>
+              <p>A phased, prioritized plan that sequences AI investments for maximum ROI built on your existing cloud foundation, not a greenfield fantasy.</p>
+            </div>
+            <div class="ai-roadmap-points">
+              <div class="ai-roadmap-point">
+                <span>01</span>
+                <p>Quarterly milestone planning</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>02</span>
+                <p>Investment-to-impact modeling</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>03</span>
+                <p>Technology stack recommendations</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>04</span>
+                <p>Risk mitigation strategies</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="ai-roadmap-row">
+            <div class="ai-roadmap-main">
+              <h3>Use-Case Discovery and Prioritization</h3>
+              <p>Industry-specific use-case workshops that surface high-impact opportunities scored by feasibility, value, and strategic alignment to ensure you start where it matters most.</p>
+            </div>
+            <div class="ai-roadmap-points">
+              <div class="ai-roadmap-point">
+                <span>01</span>
+                <p>Industry vertical deep dives</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>02</span>
+                <p>Value vs. complexity scoring</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>03</span>
+                <p>Competitive landscape analysis</p>
+              </div>
+              <div class="ai-roadmap-point">
+                <span>04</span>
+                <p>Quick-win identification</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai-impact-section" aria-labelledby="ai-impact-title">
+      <div class="container ai-impact-inner">
+        <p class="eyebrow ai-impact-eyebrow">The Impact</p>
+        <h2 id="ai-impact-title" class="ai-impact-title">From Ambiguity to Actionable Clarity</h2>
+        <p class="ai-impact-subtitle">Enterprises that start with strategic AI consulting consistently outperform those that jump straight to implementation.</p>
+
+        <dl class="stats-grid stats-grid-security">
+          <div>
+            <dt class="stat-value gradient">60%</dt>
+            <dd>Faster time-to-first-AI-value</dd>
+          </div>
+          <div>
+            <dt class="stat-value gradient">3x</dt>
+            <dd>Higher pilot-to-production rate</dd>
+          </div>
+          <div>
+            <dt class="stat-value gradient">40%</dt>
+            <dd>Reduction in wasted AI spend</dd>
+          </div>
+          <div>
+            <dt class="stat-value gradient">100%</dt>
+             <dd>Alignment with business KPIs</dd>
+          </div>
+        </dl>
+
+
+        <a href="#" class="btn btn-outline ai-impact-cta">Start Your AI Strategy</a>
+      </div>
+    </section>
+
+
+    <!-- Technology Partners Section -->
+    <section class="section section-soft partners-section" aria-labelledby="partners-title-scs">
+      <div class="container partners-wrap">
+        <h2 id="partners-title-scs" class="display">Technology<br />Partners</h2>
+        <div class="partners-logos" aria-label="Technology partner logos">
+          <img src="images/aws_partner.jpg" alt="AWS Partner" />
+          <img src="images/ms_partner.jpg" alt="Microsoft Solutions Partner" />
+          <img src="images/gcp_partner.jpg" alt="Google Cloud Partner" />
+          <img src="images/oracle_partner.jpg" alt="Oracle Cloud Infrastructure" />
+          <img src="images/akamai_partner.jpg" alt="Akamai" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer (Same as index.html) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <!-- CTA block -->
+      <p class="eyebrow light">Why Choose Us</p>
+      <h2 class="display light">Ready to <span class="gradient">Simplify</span>?</h2>
+      <p class="lead light">Start your journey from complexity to autonomy. Let's build the future of your enterprise together.</p>
+      <div class="cta-row footer-cta" role="group" aria-label="Footer actions">
+        <a class="btn light-border" href="#">Start Your Simplification Journey</a>
+        <a class="btn light-border" href="#">Contact Us</a>
+      </div>
+
+      <!-- Nav links + Brand -->
+      <div class="footer-main">
+        <div class="footer-nav-cols">
+          <div>
+            <h3>Solutions</h3>
+            <ul>
+              <li><a href="#">Infrastructure</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Operations</a></li>
+              <li><a href="#">Data</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Whitepapers</a></li>
+              <li><a href="#">Agent Catalog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Whitepapers</a></li>
+              <li><a href="#">Agent Catalog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-brand">
+          <img src="images/logo-footer.png" alt="CloudifyOps" class="footer-logo" />
+          <p class="footer-tagline">Your AI Transformation Partner.<br>Born in the cloud trenches.</p>
+          <div class="footer-social" role="list" aria-label="Social media links">
+            <a href="#" aria-label="YouTube" role="listitem"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn" role="listitem"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook" role="listitem"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" role="listitem"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offices -->
+      <section class="offices" aria-label="Office addresses">
+        <h3>Offices</h3>
+        <div class="office-grid">
+          <p>CloudifyOps Pvt Ltd, Ground Floor, Block C, DSR Techno Cube, Survey No.68, Varthur Rd, Thubarahalli, Bengaluru, Karnataka 560066</p>
+          <p>CloudifyOps Pvt Ltd, Cove Offices OMR, 10th Floor, Prince Infocity 1, Old Mahabalipuram Road, 50, 1st Street, Kandhanchavadi, Perungudi, Chennai, Tamil Nadu - 600096</p>
+          <p>CloudifyOps Inc., 200, Continental Dr Suite 401, Newark, Delaware 19713, United States of America</p>
+        </div>
+      </section>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 CloudifyOps. All rights reserved.</p>
+        <nav aria-label="Legal">
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (function () {
+      var header = document.querySelector(".site-header");
+      if (!header) return;
+
+      function syncHeaderState() {
+        if (window.scrollY > 8) {
+          header.classList.add("is-scrolled");
+        } else {
+          header.classList.remove("is-scrolled");
+        }
+      }
+
+      window.addEventListener("scroll", syncHeaderState, { passive: true });
+      syncHeaderState();
+    })();
+  </script>
+  <script>
+    (function () {
+      var scrollBtn = document.getElementById("scroll-to-top");
+      var secondSection = document.querySelector("main > section:nth-of-type(2)");
+      if (!scrollBtn || !secondSection) return;
+
+      function syncScrollButton() {
+        var revealAt = secondSection.offsetTop - 20;
+        if (window.scrollY >= revealAt) {
+          scrollBtn.classList.add("is-visible");
+        } else {
+          scrollBtn.classList.remove("is-visible");
+        }
+      }
+
+      scrollBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", syncScrollButton, { passive: true });
+      window.addEventListener("resize", syncScrollButton);
+      syncScrollButton();
+    })();
+  </script>
+  <script>
+    (function () {
+      var statValues = document.querySelectorAll(".security-stats .stat-value, .ai-impact-section .stat-value");
+      var animated = new Set();
+
+      function animateCounter(element) {
+        if (animated.has(element)) return;
+        animated.add(element);
+
+        var originalText = element.textContent.trim();
+        var numberMatch = originalText.match(/[0-9]+(?:\.[0-9]+)?/);
+        if (!numberMatch) return;
+
+        var numericText = numberMatch[0];
+        var finalValue = parseFloat(numericText);
+        var prefix = originalText.slice(0, numberMatch.index);
+        var suffix = originalText.slice(numberMatch.index + numericText.length);
+        var isDecimal = numericText.includes(".");
+
+        var duration = 2000;
+        var startTime = null;
+
+        function updateCounter(currentTime) {
+          if (!startTime) startTime = currentTime;
+          var elapsed = currentTime - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+
+          var steppedValue = Math.floor(progress * finalValue * 10) / 10;
+          var displayNumber = isDecimal ? steppedValue.toFixed(1) : String(Math.floor(steppedValue));
+
+          element.textContent = prefix + displayNumber + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = prefix + numericText + suffix;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      }
+
+      if ("IntersectionObserver" in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        statValues.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        statValues.forEach(function (el) {
+          animateCounter(el);
+        });
+      }
+    })();
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    (function () {
+      // Initialize AOS for content elements (not entire sections)
+      var cardSelectors = [
+        '.service-box',
+        '.why-card',
+        '.related-card'
+      ];
+      
+      cardSelectors.forEach(function(selector) {
+        var elements = document.querySelectorAll(selector);
+        elements.forEach(function(el, index) {
+          el.setAttribute("data-aos", "fade-up");
+          el.setAttribute("data-aos-duration", "800");
+          el.setAttribute("data-aos-delay", String(Math.min(index * 50, 200)));
+        });
+      });
+
+      // Add animation to section titles and content
+      var sections = document.querySelectorAll("main > section");
+      sections.forEach(function(section) {
+        var display = section.querySelector(".display");
+        var eyebrow = section.querySelector(".eyebrow");
+        var leads = section.querySelectorAll(".lead");
+        var ctaRow = section.querySelector(".cta-row");
+        var grid = section.querySelector("[class*='-grid']");
+        
+        if (display) display.setAttribute("data-aos", "fade-up");
+        if (eyebrow) eyebrow.setAttribute("data-aos", "fade-up");
+        leads.forEach(function(lead) {
+          lead.setAttribute("data-aos", "fade-up");
+        });
+        if (ctaRow) ctaRow.setAttribute("data-aos", "fade-up");
+        if (grid && !grid.classList.contains("stats-grid")) {
+          grid.setAttribute("data-aos", "fade-up");
+        }
+      });
+
+      // Remove animation from background images
+      var bgImages = document.querySelectorAll(".managed-bg, .background-visual");
+      bgImages.forEach(function(el) {
+        el.removeAttribute("data-aos");
+      });
+
+      AOS.init({
+        once: true,
+        offset: 100,
+        duration: 800,
+        easing: "ease-out-cubic"
+      });
+    })();
+  </script>
+
+  <script>
+    // Mobile menu toggle
+    (function () {
+      var toggleBtn = document.getElementById("mobile-menu-toggle");
+      var mobileNav = document.getElementById("mobile-nav");
+      if (!toggleBtn || !mobileNav) return;
+
+      toggleBtn.addEventListener("click", function () {
+        var isOpen = mobileNav.classList.toggle("is-open");
+        toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        mobileNav.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+
+      // Close menu when a link is clicked
+      mobileNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          mobileNav.classList.remove("is-open");
+          toggleBtn.setAttribute("aria-expanded", "false");
+          mobileNav.setAttribute("aria-hidden", "true");
+        });
+      });
+    })();
+  </script>
+</html>
