@@ -1568,9 +1568,10 @@ background-color: #ffffff;
   margin: 0 0 24px;
   font-family: var(--display-font);
   font-weight: 800;
-  font-size: clamp(42px, 3.5vw, 64px);
+  font-size: clamp(40px, 3vw, 60px);
   line-height: 1.06;
   color: #0f0f0f;
+  max-width: 50%;
 }
 
 .profile-answer-grid {
@@ -1686,6 +1687,7 @@ background-color: #ffffff;
   .profile-answer-group h2 {
     font-size: clamp(32px, 8vw, 42px);
     margin-bottom: 16px;
+    max-width: 100%;
   }
 }
 
