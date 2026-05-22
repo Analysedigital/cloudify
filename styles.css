@@ -3767,7 +3767,8 @@ background-color: #ffffff;
     }
 
     .approach-spine-marker span {
-      position: static;
+      position: relative;
+      left:-20px!important;
       transform: none;
       font-size: clamp(30px, 9vw, 40px);
     }
